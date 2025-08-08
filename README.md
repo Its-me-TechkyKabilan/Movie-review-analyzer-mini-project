@@ -6,15 +6,17 @@ This project is a machine learning-based sentiment analysis system trained on mo
 
 ## 📁 Project Structure
 
+```
 movie_sentiment_project/
 │
-├── sentiment_training_and_saving.py # Training pipeline & model saving
-├── app.py # Streamlit app for user input & prediction
-├── model.pkl # Trained sentiment model
-├── vectorizer.pkl # TF-IDF vectorizer used for features
-├── requirements.txt # Required Python packages
-├── README.md # You're reading it!
+├── sentiment_training_and_saving.py  # Training pipeline & model saving
+├── app.py                            # Streamlit app for user input & prediction
+├── model.pkl                         # Trained sentiment model
+├── vectorizer.pkl                    # TF-IDF vectorizer used for features
+├── requirements.txt                  # Required Python packages
+├── README.md                         # You're reading it!
 └── ...
+```
 
 ---
 
@@ -35,80 +37,80 @@ movie_sentiment_project/
 ```bash
 git clone https://github.com/your-username/movie_sentiment_project.git
 cd movie_sentiment_project
+```
 
-2. Install Requirements
-bash
-Copy
-Edit
+### 2. Install Requirements
+
+```bash
 pip install -r requirements.txt
+```
 
-3. Run the App
-bash
-Copy
-Edit
+### 3. Run the App
+
+```bash
 streamlit run app.py
+```
 
-🧠 Model Training (sentiment_training_and_saving.py)
-Loads nltk.corpus.movie_reviews
+---
 
-Converts text to TF-IDF vectors
+## 🧠 Model Training (`sentiment_training_and_saving.py`)
 
-Splits data into training/testing sets
+- Loads `nltk.corpus.movie_reviews`
+- Converts text to TF-IDF vectors
+- Splits data into training/testing sets
+- Trains a logistic regression classifier
+- Saves the model & vectorizer using `pickle`
 
-Trains a logistic regression classifier
+---
 
-Saves the model & vectorizer using pickle
+## 🎯 Streamlit App (`app.py`)
 
-🎯 Streamlit App (app.py)
-Takes user input (movie review text)
+- Takes user input (movie review text)
+- Preprocesses using the saved vectorizer
+- Predicts sentiment using saved model
+- Displays the prediction: ✅ Positive / ❌ Negative
 
-Preprocesses using the saved vectorizer
+---
 
-Predicts sentiment using saved model
+## 📦 Dependencies
 
-Displays the prediction: ✅ Positive / ❌ Negative
-
-📦 Dependencies
-nginx
-Copy
-Edit
+```
 nltk
 scikit-learn
 streamlit
 datasets
 pickle
+```
+
 Make sure to download NLTK data (first run only):
 
-python
-Copy
-Edit
+```python
 import nltk
 nltk.download('movie_reviews')
-📷 Screenshot
-
-✨ Future Enhancements
-Add support for multiclass classification (neutral, mixed)
-
-Use advanced models (BERT, LSTM, etc.)
-
-Improve UI with themes and graph analytics
-
-🧑‍💻 Author
-Kabilan S – GitHub
-
-📜 License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-yaml
-Copy
-Edit
+```
 
 ---
 
-### 📎 Want the File?
+## 📷 Screenshot
 
-Click below to download:
+![App Screenshot](screenshot.png)
 
-👉 [Download README.md](sandbox:/mnt/data/README.md)
+---
 
-Let me know if you want me to customize it based on your **project name**, **your GitHub 
+## ✨ Future Enhancements
+
+- Add support for multiclass classification (neutral, mixed)
+- Use advanced models (BERT, LSTM, etc.)
+- Improve UI with themes and graph analytics
+
+---
+
+## 🧑‍💻 Author
+
+- **Kabilan S** – [GitHub](https://github.com/Its-me-TechkyKabilan)
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
